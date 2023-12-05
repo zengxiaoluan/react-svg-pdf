@@ -1,23 +1,12 @@
-# react-svg-pdf
-
-The goal of `react-svg-pdf` is to help you build pdf more easily, If you know how to create svg, you also know how to create pdf.
-
-## How to use?
-
-```shell
-npm i react-svg-pdf -S
-```
-
-Next, you can write your familiar SVG code like below, that will make a heart for you.
-
-```jsx
-import ReactPDF from "react-svg-pdf";
+import ReactPDF from "./src/react-pdf-render";
 import React from "react";
 import jsPDF from "jspdf";
 
 function App() {
   return (
     <>
+      <path d="M 10 10 L 100 100 L 100 200 Z" fill="#26d5d5" stroke="#000" />
+      <path d="M 20 10 L 110 100 L 110 200" stroke="#000" />
       <path
         fill="#e06d21"
         d="M 10,30
@@ -43,5 +32,3 @@ ReactPDF.render(
     if (embed) embed.src = pdf.output("bloburi") as any;
   }
 );
-
-```
